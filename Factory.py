@@ -12,17 +12,18 @@ class Choco(Ice):
         self.taste = "chocolate"
         self.wafer ="danish"
 
-class Lemon(Ice):
-    def __init__(self):
-        self.name = "YellowLemon"
-        self.taste = "lemon"
-        self.wafer = "classic"
-
 class Vanilla(Ice):
     def __init__(self):
         self.name = "Standard"
         self.taste = "vanilla"
         self.wafer ="classic"
+
+class Nut(Choco):
+    def __init__(self):
+        Choco.__init__(self)
+        self.name='ChocoNut'
+        self.taste = "nut+chocolate"
+
 
 class Factory:
     def makeIce(self, kind):
@@ -33,3 +34,4 @@ class Factory:
 
 f=Factory()
 print(f.makeIce('choco'))
+print(f.makeIce('vanil'))

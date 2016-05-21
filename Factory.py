@@ -12,6 +12,11 @@ class Choco(Ice):
         self.taste = "chocolate"
         self.wafer ="danish"
 
+class Lemon(Ice):
+    def __init__(self):
+        self.name = "YellowLemon"
+        self.taste = "lemon"
+        self.wafer = "classic"
 
 class Vanilla(Ice):
     def __init__(self):
